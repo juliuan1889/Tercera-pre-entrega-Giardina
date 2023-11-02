@@ -1,7 +1,16 @@
 {% extends 'hola.html' %}
 
 {% block main %}
+  <h2>Ingresar Datos</h2>
+  <br>
+  <form action="" >
+    {% csrf_token %}
+    <p>Producto: <input type="text" name="producto"><p>
 
+    <p>Marca: <input type="text" name="marca"><p>
 
-    
-{% endblock main%} 
+    <p>Categoria: <input type="text" name="categoria"><p>
+
+    <input type="submit" value="Enviar">
+  </form>
+{% endblock main %}

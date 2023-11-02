@@ -1,10 +1,8 @@
 from django import forms
-from .models import Categoria, Marca, Producto
 
-class ProductoForm(forms.ModelForm):
-    class Meta:
-        model = Producto
-        fields = '__all__'
+class ProductoFomulario(forms.Form):
+    
+    producto = forms.ChoiceField()
+    marca = forms.ChoiceField()
+    categoria = forms.ChoiceField()
 
-class BuscarForm(forms.Form):
-    termino_busqueda = forms.CharField(max_length=100)
